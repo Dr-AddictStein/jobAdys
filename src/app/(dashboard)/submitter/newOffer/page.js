@@ -1,94 +1,91 @@
+'use client';
+
+import { useState } from 'react';
+import RichTextEditor from '@/components/Dashboard/RichTextEditor';
+
 export default function NewOfferPage() {
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log({ title, content });
+    // You would typically send this data to your API
+  };
+
   return (
-    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>Create New Offer</h1>
-      <div style={{ marginTop: '2rem' }}>
-        <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div>
-            <label htmlFor="title" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-              Offer Title
-            </label>
+    <main style={{ 
+      padding: '2rem', 
+      fontFamily: 'sans-serif',
+      backgroundColor: '#f9f3f3',
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <div style={{ 
+        width: '90%', 
+        backgroundColor: '#6c92e6', 
+        borderRadius: '8px',
+        padding: '2rem',
+        boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
+      }}>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {/* Offer Name field with label */}
+          <div style={{ display: 'flex' }}>
+            <div style={{ 
+              backgroundColor: '#e74c3c', 
+              color: 'white',
+              padding: '0.75rem 1rem',
+              borderTopLeftRadius: '4px',
+              borderBottomLeftRadius: '4px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              Offer Name
+            </div>
             <input 
               type="text" 
-              id="title" 
-              name="title" 
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
               style={{ 
-                width: '100%', 
-                padding: '0.75rem', 
-                borderRadius: '4px', 
-                border: '1px solid #ccc' 
+                flex: 1,
+                padding: '0.75rem',
+                border: 'none',
+                borderTopRightRadius: '4px',
+                borderBottomRightRadius: '4px',
+                outline: 'none'
               }} 
-              placeholder="Enter a descriptive title for your offer"
             />
           </div>
           
+          {/* Rich Text Editor for Offer Content */}
           <div>
-            <label htmlFor="description" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-              Description
-            </label>
-            <textarea 
-              id="description" 
-              name="description" 
-              rows="4" 
-              style={{ 
-                width: '100%', 
-                padding: '0.75rem', 
-                borderRadius: '4px', 
-                border: '1px solid #ccc' 
-              }} 
-              placeholder="Describe the details of your offer"
-            ></textarea>
-          </div>
-          
-          <div>
-            <label htmlFor="budget" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-              Budget
-            </label>
-            <input 
-              type="number" 
-              id="budget" 
-              name="budget" 
-              style={{ 
-                width: '100%', 
-                padding: '0.75rem', 
-                borderRadius: '4px', 
-                border: '1px solid #ccc' 
-              }} 
-              placeholder="Enter your budget"
+            <RichTextEditor 
+              value={content}
+              onChange={setContent}
+              placeholder="Offer Content // Up to 700 words"
             />
           </div>
           
-          <div>
-            <label htmlFor="deadline" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-              Deadline
-            </label>
-            <input 
-              type="date" 
-              id="deadline" 
-              name="deadline" 
-              style={{ 
-                width: '100%', 
-                padding: '0.75rem', 
-                borderRadius: '4px', 
-                border: '1px solid #ccc' 
-              }}
-            />
-          </div>
-          
+          {/* Send button */}
           <button 
             type="submit" 
             style={{ 
-              padding: '0.75rem 1.5rem', 
-              backgroundColor: '#0070f3', 
+              width: '160px',
+              padding: '0.75rem', 
+              backgroundColor: '#e74c3c', 
               color: 'white', 
               border: 'none', 
               borderRadius: '4px', 
               cursor: 'pointer',
               fontWeight: 'bold',
-              marginTop: '1rem'
+              fontSize: '1rem'
             }}
           >
-            Create Offer
+            SEND
           </button>
         </form>
       </div>

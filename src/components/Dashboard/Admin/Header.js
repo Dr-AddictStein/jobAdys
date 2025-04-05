@@ -21,7 +21,9 @@ export default function Navbar() {
     <div className={styles.navWrapper}>
       <nav className={styles.Header}>
         <div className={styles.left}>
-          <Image src="/Logotipe.png" alt="JobAdys Logo" width={120} height={40} />
+          <Link href="/submitter">
+            <Image src="/Logotipe.png" alt="JobAdys Logo" width={120} height={40} />
+          </Link>
           <div className={styles.searchContainer}>
             <svg className={styles.searchIcon} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -35,10 +37,10 @@ export default function Navbar() {
         </div>
       </nav>
       <div className={styles.navLinks}>
-        <a href="#">My Profile</a>
-        <a href="#">All Profiles</a>
-        <a href="#">All Offers</a>
-        <a href="#">Write System Notification</a>
+        <Link href="/submitter/profile">My Profile</Link>
+        <Link href="/submitter">Dashboard</Link>
+        <Link href="/submitter/allOffers">All Offers</Link>
+        <Link href="/submitter/newOffer">Create New Offer</Link>
       </div>
     </div>
   );

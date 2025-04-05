@@ -9,7 +9,7 @@ const AdminHomeContent = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("/api/admin/login-logs")
+    fetch("/API/admin/login-logs")
       .then((res) => {
         if (!res.ok) throw new Error("API failed");
         return res.json();

@@ -1,44 +1,101 @@
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .Header {
-    background-color: #4353b3;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logoText {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .search {
-    margin-left: 20px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: none;
-    font-size: 14px;
-  }
-  
-  .right {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .right a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .username {
-    font-weight: bold;
-  }
+  background-color: #4055B0;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoIcon {
+  background-color: #58a0ff;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 2px;
+}
+
+.logoText {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3f51b5;
+  width: 16px;
+  height: 16px;
+}
+
+.search {
+  padding: 8px 10px 8px 35px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  width: 200px;
+}
+
+.search::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.navLinks {
+  background-color: #596BBE;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 0;
+}
   

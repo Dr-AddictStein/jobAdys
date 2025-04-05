@@ -1,34 +1,65 @@
 .footer {
-    background-color: #4353b3;
-    color: white;
-    padding: 40px 30px 20px;
-  }
-  
-  .columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  .columns h4 {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  .columns a {
-    display: block;
-    font-size: 13px;
-    margin-bottom: 6px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .bottom {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    border-top: 1px solid #ffffff55;
-    padding-top: 10px;
-  }
+  background-color: #2A3878;
+  color: white;
+  padding: 0;
+  width: 100%;
+}
+
+.disclaimer {
+  background-color: #273269;
+  color: white;
+  font-size: 12px;
+  padding: 8px 30px;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.columns > div {
+  margin: 0 20px;
+}
+
+.columns h4 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.columns a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  padding: 15px 20px;
+  background-color: #2A3878;
+  gap: 40px;
+}
+
+.bottom a, .bottom span {
+  color: white;
+  text-decoration: none;
+}
   

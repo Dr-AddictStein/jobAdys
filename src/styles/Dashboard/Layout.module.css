@@ -1,0 +1,12 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f0ee;
+}
+
+.contentWrapper {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+} 

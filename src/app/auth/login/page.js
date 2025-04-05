@@ -1,13 +1,38 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 import styles from '@/styles/AUTH/Login.module.css';
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { login, user } = useAuth();
+  const router = useRouter();
+
+  // Redirect if user is already logged in
+  useEffect(() => {
+    if (user) {
+      const role = user.role?.toLowerCase();
+      switch (role) {
+        case 'admin':
+          router.push('/admin');
+          break;
+        case 'submitter':
+          router.push('/submitter');
+          break;
+        case 'performer':
+          router.push('/performer');
+          break;
+        default:
+          router.push('/');
+      }
+    }
+  }, [user, router]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,6 +41,7 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     try {
       const res = await fetch('/API/login', {
@@ -33,32 +59,39 @@ export default function LoginPage() {
       } else {
         const text = await res.text();
         console.error('Unexpected response:', text);
+        setLoading(false);
         return setError('Unexpected server response');
       }
 
       if (!res.ok) {
+        setLoading(false);
         return setError(data?.error || 'Login failed');
       }
 
-      // ✅ Redirect based on user role (case-insensitive)
-      const role = data?.role?.toLowerCase();
+      // Store user data in the AuthContext
+      login(data);
+
+      // Redirect based on user role (case-insensitive)
+      const role = data?.user?.role?.toLowerCase() || '';
 
       switch (role) {
         case 'admin':
-          window.location.href = '/admin';
+          router.push('/admin');
           break;
         case 'submitter':
-          window.location.href = '/submitter';
+          router.push('/submitter');
           break;
         case 'performer':
-          window.location.href = '/performer';
+          router.push('/performer');
           break;
         default:
-          window.location.href = '/';
+          router.push('/');
       }
     } catch (err) {
       console.error('Login error:', err);
       setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -113,7 +146,9 @@ export default function LoginPage() {
 
             {error && <p className={styles.errorMessage}>{error}</p>}
 
-            <button type="submit" className={styles.submitButton}>Sign in</button>
+            <button type="submit" className={styles.submitButton} disabled={loading}>
+              {loading ? 'Signing in...' : 'Sign in'}
+            </button>
           </form>
         </div>
       </div>

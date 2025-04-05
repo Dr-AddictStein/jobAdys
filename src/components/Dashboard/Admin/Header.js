@@ -2,35 +2,21 @@
 
 import Image from 'next/image';
 import styles from '@/styles/Dashboard/Admin/Header.module.css';
-import { useEffect, useState } from 'react';
+import { useUser } from '@/hooks/useUser';
+import { useAuth } from '@/context/AuthContext';
+import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function Navbar() {
-  const [username, setUsername] = useState('');
+  const { user } = useUser();
+  const { logout } = useAuth();
 
   useEffect(() => {
-    // Fetch the user data or get it from session/local storage
-    // This is a placeholder - replace with your actual authentication method
-    const fetchUserData = async () => {
-      try {
-        // Example: Get from localStorage, session, or API call
-        const user = localStorage.getItem('user');
-        if (user) {
-          const userData = JSON.parse(user);
-          setUsername(userData.name || userData.username || 'User');
-        } else {
-          // If no user in storage, you might want to redirect to login
-          // or use a guest username
-          setUsername('Guest');
-        }
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-        setUsername('User');
-      }
-    };
-
-    fetchUserData();
-  }, []);
-
+    if (user) {
+      console.log("user", user);
+    }
+  }, [user]);
+  
   return (
     <div className={styles.navWrapper}>
       <nav className={styles.Header}>
@@ -44,7 +30,8 @@ export default function Navbar() {
           </div>
         </div>
         <div className={styles.right}>
-          <span className={styles.username}>{username || 'Vladyslav Titov'}</span>
+          <span className={styles.username}>{user?.name || 'Guest'}</span>
+          <button onClick={logout} className={styles.logoutButton}>Logout</button>
         </div>
       </nav>
       <div className={styles.navLinks}>

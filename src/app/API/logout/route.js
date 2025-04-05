@@ -1,11 +1,9 @@
-import { serialize } from 'cookie';
+import { cookies } from 'next/headers';
+import { NextResponse } from 'next/server';
 
 export async function POST() {
-  const serialized = serialize('token', '', {
-    httpOnly: true, path: '/', maxAge: 0,
-  });
-  return new Response('Logged out', {
-    status: 200,
-    headers: { 'Set-Cookie': serialized }
-  });
+  // Clear the user cookie
+  cookies().delete('user');
+  
+  return NextResponse.json({ success: true });
 }

@@ -53,8 +53,20 @@ export async function POST(req) {
       maxAge: 60 * 60 * 24 * 7,
     });
 
+    // Create a user object without the password
+    const userWithoutPassword = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      createdAt: user.createdAt
+    };
+
     return new Response(
-      JSON.stringify({ success: true, role: user.role }),
+      JSON.stringify({ 
+        success: true, 
+        user: userWithoutPassword 
+      }),
       {
         status: 200,
         headers: {

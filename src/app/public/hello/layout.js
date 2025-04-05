@@ -1,14 +1,12 @@
-
 import "@/styles/globals.css";
+import styles from '@/styles/Public/Layout.module.css';
 
-export default function RootLayout({ children }) {
+export default function PublicLayout({ children }) {
   return (
-    <html>
-      <body>
-        
-        <main>{children}</main>
-        
-      </body>
-    </html>
+    <div className={styles.pageContainer}>
+      <main className={styles.contentWrapper}>
+        {children}
+      </main>
+    </div>
   );
 }

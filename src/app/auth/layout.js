@@ -1,12 +1,12 @@
-
-
 import '@/styles/globals.css';
-
+import styles from '@/styles/Auth/Layout.module.css';
 
 export default function AUTHLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <div className={styles.pageContainer}>
+      <main className={styles.contentWrapper}>
+        {children}
+      </main>
+    </div>
   )
 }

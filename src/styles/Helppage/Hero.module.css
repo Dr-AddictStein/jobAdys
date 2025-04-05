@@ -1,0 +1,25 @@
+.Hero {
+    width: 100%;
+    background: url('/wave.svg') no-repeat center bottom;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.contentTitle{
+    color: #FFF;
+    text-align: left;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width:735px;
+}
+.contentText{
+    color: #FFF;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

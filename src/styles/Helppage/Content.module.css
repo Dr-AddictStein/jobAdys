@@ -1,0 +1,76 @@
+.Content {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .timelineContainer {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+  }
+  
+  /* Full vertical timeline line */
+  .timelineContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 37px;
+    width: 3px;
+    background-color: #608FD6;
+  }
+  
+  /* Each timeline block (title + section items) */
+  .timelineBlock {
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .timelineTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .timelineTitle h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1d2b64;
+    margin-left: 20px;
+  }
+  
+  /* Circle centered on the vertical timeline line */
+  .circle {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-color: #608FD6;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .sectionItems {
+    padding-left: 20px;
+  }
+  
+  .subItem {
+    margin-bottom: 24px;
+  }
+  
+  .subItem h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .subItem p {
+    white-space: pre-line;
+    font-size: 16px;
+    color: #555;
+  }
+  

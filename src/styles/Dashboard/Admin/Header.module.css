@@ -1,0 +1,44 @@
+.Header {
+    background-color: #4353b3;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logoText {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .search {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .right a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,139 @@
+.Testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.reviewBox {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 25px;
+    border: 1px solid #455CC2;
+}
+.score {
+    background-color: #455CC2;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.score p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.reviewText {
+    color: #455CC2;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 45px; /* 125% */
+    width: 350px;
+}
+
+.stars {
+    color: #FFC632;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px; /* 187.5% */
+    width: 350px;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 870px;
+    height: 220px;
+    margin: auto;
+    position: relative;
+}
+
+.comment {
+    color: #011B42;
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px; /* 140.625% */
+}
+
+.subtext {
+    color: #000;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px; /* 187.5% */
+}
+
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.activeAvatar {
+    width: 120px; /* Make center avatar bigger */
+    height: 120px;
+    opacity: 1;
+    border-color: #455CC2;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background-color: #455CC2;
+}

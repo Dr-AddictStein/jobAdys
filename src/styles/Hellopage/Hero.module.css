@@ -1,0 +1,42 @@
+.Hero {
+  width: 100%;
+  background: url('/wave.svg') no-repeat center bottom;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contentTitle{
+  color: #FFF;
+  font-family: "Sora", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px; 
+}
+.contentText{
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.button{
+  background-color: #E85C27;
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+

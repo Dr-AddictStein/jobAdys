@@ -1,0 +1,100 @@
+.Footer {
+    background-color: #2f3a77;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+.footerLegal{
+    width: 100%;
+    height: 33px;
+    background-color: #212C61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:-40px;
+}
+.footerLegal p{
+    font-size: 12px;
+}
+
+.section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+.section ul li a {
+    color: white;
+    
+    text-decoration: none;
+    
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.section ul li a:hover {
+    opacity: 1;
+}
+
+.bottom {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.line {
+    width: 90%;
+    margin: 0 auto 15px;
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bottomLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.bottomLinks a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.bottomLinks a:hover {
+    opacity: 1;
+}
+
+.bottomLinks span {
+    opacity: 0.5;
+}
+
+.bottomLinks p {
+    margin: 0;
+    opacity: 0.7;
+}

@@ -1,0 +1,80 @@
+.JobAdysSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1155px;
+    height: 550px;
+    background-color: #fff;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 450px;
+    height: 490px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 450px;
+    height: 142px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    background: url('/star.svg') no-repeat center bottom;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  
+  .title {
+  color: #000;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 45px;
+  }
+  
+  .text {
+    color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+  }
+  
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(cuid())
+  name      String
+  email     String     @unique
+  password  String
+  role      String
+  createdAt DateTime   @default(now())
+
+  loginLogs LoginLog[]  // ⬅️ Relation: one user can have many login logs
+}
+
+model LoginLog {
+  id        String   @id @default(cuid())
+  userId    String
+  ip        String
+  location  String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id]) // ⬅️ Belongs to user
+}

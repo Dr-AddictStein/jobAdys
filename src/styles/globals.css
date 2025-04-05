@@ -1,0 +1,61 @@
+/* ✅ 1. Reset & Normalize */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ 2. Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  @apply bg-gray-100 text-gray-900;
+  font-family: "Sora", sans-serif;
+  background-color: #F9F6F6;
+}
+
+/* ✅ 3. Global Layout */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* ✅ 4. Buttons */
+.btn-primary {
+  @apply bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition;
+}
+
+.btn-secondary {
+  @apply bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition;
+}
+
+/* ✅ 5. Typography */
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+p {
+  @apply text-lg text-gray-700;
+}
+
+/* ✅ 6. Custom Components */
+.hero {
+  @apply bg-blue-200 py-16 text-center;
+}
+
+.footer {
+  @apply bg-gray-900 text-white text-center py-6;
+}

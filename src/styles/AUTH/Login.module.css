@@ -1,0 +1,123 @@
+.page {
+    background-color: #4353b3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    background-color: white;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    gap: 40px;
+  }
+  
+  .left {
+    width: 49%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .brand {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .description {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .Bdivider{
+    width: 0.8px;
+    height: 350px;
+    background-color: #004CBE;
+    border: none;
+  }
+  .right {
+    flex: 1;
+  }
+  
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: 18px;
+  }
+  
+  .signupLink {
+    color: #ffffff;
+    background-color: #455CC2;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 140.774px;
+    height: 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .extraRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .forgotLink {
+    color: #4353b3;
+    text-decoration: underline;
+    font-size: 12px;
+  }
+  
+  .submitButton {
+    background-color: #4353b3;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #3340a3;
+  }
+  

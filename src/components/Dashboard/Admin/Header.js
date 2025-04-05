@@ -7,8 +7,7 @@ export default function Navbar() {
   return (
     <nav className={styles.Header}>
       <div className={styles.left}>
-        <Image src="/logo.png" alt="JobAdys Logo" width={30} height={30} />
-        <span className={styles.logoText}>JobAdys</span>
+        <Image src="/Logotipe.png" alt="JobAdys Logo" width={120} height={40} />
         <input className={styles.search} type="text" placeholder="Search job here..." />
       </div>
       <div className={styles.right}>

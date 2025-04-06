@@ -13,6 +13,10 @@ model User {
   email     String     @unique
   password  String
   role      String
+  image     String?
+  bio       String?    @db.Text
+  phone     String?
+  birthDate String?
   createdAt DateTime   @default(now())
 
   loginLogs LoginLog[]  // ⬅️ Relation: one user can have many login logs
